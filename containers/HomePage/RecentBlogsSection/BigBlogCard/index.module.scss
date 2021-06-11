@@ -1,0 +1,63 @@
+@import '../../../../styles/guidelines';
+
+.bigCard {
+	width: 71.3rem;
+	overflow: hidden;
+	border-radius: 7px;
+
+	@media only screen and(max-width: 1080px) {
+		width: 60rem;
+	}
+
+	@media only screen and(max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.bgImage {
+	min-height: 40rem;
+	max-height: 40rem;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	@media only screen and(max-width: 1080px) {
+		max-height: auto;
+		min-height: 30rem;
+	}
+
+	@media only screen and(max-width: 600px) {
+		max-height: 20rem;
+		min-height: 20rem;
+		height: 20rem;
+	}
+}
+
+.blogText {
+	min-height: 18rem;
+	width: 100%;
+	background: #ebeef0;
+	padding: 2rem;
+	position: relative;
+
+	h4 {
+		font-size: $fontsize_subtitle_24;
+		margin-bottom: 2rem;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_semibold;
+		color: $second_grey;
+		margin-top: 2rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 2rem;
+
+		@media only screen and(max-width: 500px) {
+			font-size: $fontsize_content_12;
+		}
+	}
+}

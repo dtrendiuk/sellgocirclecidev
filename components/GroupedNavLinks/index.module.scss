@@ -1,0 +1,45 @@
+@import '../../styles/guidelines';
+
+.groupedNavLinks {
+	margin-bottom: 3rem;
+	cursor: auto;
+	padding: 1rem;
+	border-radius: 7px;
+	border: 1px solid #fff;
+	min-width: 31rem;
+	max-width: 31rem;
+	width: 31rem;
+
+	&:hover {
+		border: 1px solid rgba($border-color-1, 0.3);
+		box-shadow: $box-shadow-1;
+	}
+
+	a {
+		cursor: pointer !important;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		min-width: 45%;
+	}
+}
+
+.linkDetails {
+	color: $prim_dark_2;
+	margin-left: 1rem;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	h2 {
+		font-size: $fontsize_content_18;
+		font-weight: $fontweight_medium;
+	}
+
+	p {
+		color: $grey_8;
+		font-size: $fontsize_content_12;
+	}
+}

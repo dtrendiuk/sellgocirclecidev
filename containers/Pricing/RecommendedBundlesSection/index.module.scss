@@ -1,0 +1,155 @@
+@import '../../../styles/guidelines';
+
+.recommendedBundlesSectionWrapper {
+	margin: 10rem auto;
+}
+
+.recommendedBundlesSection {
+	border: 1px solid $second_silver;
+	border-radius: 7px;
+	margin-bottom: 4rem;
+	margin-top: 2rem;
+	padding: 3rem;
+}
+
+.bundlesInfoWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: $prim_dark_2;
+
+	@media only screen and(max-width: 950px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.bundlesInfo {
+	text-align: left;
+	margin-right: 10rem;
+
+	@media only screen and(max-width: 950px) {
+		margin-right: 0;
+		width: 100%;
+	}
+	h3 {
+		font-size: $fontsize_subtitle_20;
+		color: inherit;
+		margin-bottom: 2rem;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		color: $second_grey;
+		font-size: $fontsize_content_14;
+	}
+
+	a {
+		font-size: $fontsize_content_14;
+		color: $blue_8;
+		font-weight: $fontweight_semibold;
+		span {
+			margin-left: 5px;
+		}
+	}
+}
+
+.bundlesCTAInfo {
+	text-align: center;
+
+	@media only screen and(max-width: 650px) {
+		margin-top: 2rem;
+	}
+
+	small {
+		color: $second_grey;
+		margin-bottom: 1rem;
+		display: inline-block;
+		font-size: $fontsize_content_12;
+	}
+}
+
+.price {
+	font-size: $fontsize_subtitle_20;
+	color: $blue_8;
+	margin-bottom: 2rem;
+
+	&__type {
+		font-size: $fontsize_content_14;
+	}
+
+	&__discount {
+		margin-left: 1rem;
+		color: $second_grey;
+		text-decoration: line-through;
+		font-size: $fontsize_content_14;
+	}
+}
+
+.bundlesCTA {
+	width: 30rem;
+	margin: 2rem auto;
+
+	@media only screen and(max-width: 500px) {
+		width: 25rem;
+	}
+}
+
+.idealWrapper {
+	margin-top: 2rem;
+	p {
+		font-size: $fontsize_content_14;
+		color: $second_grey;
+	}
+
+	ul {
+		list-style: none;
+		font-size: $fontsize_content_14;
+		color: $prim_dark_2;
+		li {
+			margin: 4px 0;
+			span {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.includesText {
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	margin-top: 2rem;
+}
+
+.includesListWrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	margin-top: 1rem;
+
+	@media only screen and(max-width: 950px) {
+		justify-content: space-evenly;
+	}
+
+	@media only screen and(max-width: 650px) {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+}
+
+.includesList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 3rem;
+	span {
+		margin-left: 8px;
+	}
+
+	@media only screen and(max-width: 650px) {
+		margin-bottom: 1rem;
+		margin-right: 2rem;
+	}
+}

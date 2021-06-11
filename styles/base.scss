@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; //1rem =10px
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Work Sans', sans-serif !important;
+	line-height: 1.5;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden !important;
+}
+
+table {
+	font-family: 'Work Sans', sans-serif !important;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: #2e3b4a;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	color: #3b4557;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+input,
+label,
+textarea {
+	font-family: 'Work Sans', sans-serif;
+}

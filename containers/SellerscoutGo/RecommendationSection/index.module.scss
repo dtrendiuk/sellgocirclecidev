@@ -1,0 +1,41 @@
+@import '../../../styles/guidelines';
+
+.recomSectionWrapper {
+	background: $blue_9;
+	border-bottom: 1px solid rgba($prim_white, 0.4);
+}
+
+.recomSection {
+	padding: 5rem 0;
+	color: $prim_white;
+	text-align: center;
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		color: inherit;
+
+		@media only screen and(max-width: 500px) {
+			font-size: 3rem;
+		}
+	}
+
+	p {
+		max-width: 850rem;
+		font-size: $fontsize_content_16;
+		margin: 2rem auto;
+		color: inherit;
+		font-weight: $fontweight_regular;
+	}
+}
+
+.recomCardsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
+}

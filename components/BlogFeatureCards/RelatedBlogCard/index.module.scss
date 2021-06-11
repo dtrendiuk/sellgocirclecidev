@@ -1,0 +1,56 @@
+@import '../../../styles/guidelines';
+
+.relatedBlogCard {
+	height: 47rem;
+	width: 34rem;
+	border-radius: 7px;
+	overflow: hidden;
+	margin: 2rem auto;
+
+	@media only screen and(max-width: 600px) {
+		width: 100%;
+		min-height: auto;
+		height: auto;
+	}
+}
+
+.bgImage {
+	min-height: 20rem;
+	height: 20rem;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+	position: relative;
+	@media only screen and(max-width: 600px) {
+		min-width: auto;
+	}
+}
+
+.blogText {
+	color: $prim_dark_2;
+	background: $grey_0;
+	padding: 2rem;
+	min-height: 27rem;
+	width: 100%;
+	position: relative;
+
+	@media only screen and(max-width: 600px) {
+		min-height: 18rem;
+	}
+
+	h2 {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_semibold;
+		margin-bottom: 4rem;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		margin-top: 2rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 2rem;
+	}
+}

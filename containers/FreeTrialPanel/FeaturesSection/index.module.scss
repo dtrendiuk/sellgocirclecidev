@@ -1,0 +1,17 @@
+@import '../../../styles/guidelines';
+
+.featuresSection {
+	margin: 4rem auto;
+}
+
+.featuresCardWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 4rem auto;
+
+	@media only screen and(max-width: 1200px) {
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+}

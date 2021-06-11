@@ -1,0 +1,48 @@
+@import '../../../styles/guidelines';
+
+.infoSectionWrapper {
+	margin-top: 10rem;
+	background: $blue_9;
+}
+
+.infoSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15rem 0;
+	color: $prim_white;
+
+	@media only screen and(max-width: 1000px) {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.infoSection__Text {
+	flex: 0 0 50%;
+
+	h2 {
+		font-size: $fontsize_subtitle_38;
+		font-weight: $fontweight_bold;
+		color: inherit;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: inherit;
+		font-weight: $fontweight_regular;
+		margin: 1rem 0;
+	}
+}
+
+.infoSection__Image {
+	width: 60rem;
+	height: 36rem;
+	@media only screen and(max-width: 1000px) {
+		margin-top: 4rem;
+	}
+
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
+}

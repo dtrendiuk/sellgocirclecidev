@@ -1,0 +1,52 @@
+@import '../../styles/guidelines';
+
+.pricePlanToggleWrapper {
+	width: 31rem;
+	height: 4rem;
+	background: $grey-3;
+	color: $prim_dark_2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 25px;
+	cursor: pointer;
+	margin: 0 auto;
+
+	@media only screen and(max-width: 500px) {
+		width: 25rem;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.priceToggleText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: start;
+	width: 16rem;
+	height: 100%;
+	p {
+		font-size: $fontsize_content_12;
+		margin: 0 !important;
+	}
+
+	small {
+		font-size: $fontsize_content_10;
+		margin: 0 !important;
+	}
+
+	&__Active {
+		background: $prim_white;
+		border: 1px solid $blue_7;
+		width: 16rem;
+		border-radius: 25px;
+		height: 100%;
+		@media only screen and(max-width: 500px) {
+			width: 16rem;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import '../../../styles/guidelines';
+
+.featuresList {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+
+	p {
+		font-size: $fontsize_content_16;
+		color: $blue_8;
+		font-weight: $fontweight_bold;
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			font-size: $fontsize_content_14;
+			margin: 4px 0;
+			span {
+				margin-left: 8px;
+			}
+		}
+	}
+}

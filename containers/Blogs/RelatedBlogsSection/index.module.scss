@@ -1,0 +1,23 @@
+@import '../../../styles/guidelines';
+
+.relatedBlogs {
+	color: $prim_dark_2;
+	margin: 15rem auto;
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		text-align: center;
+	}
+}
+
+.relatedBlogsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 5rem auto;
+
+	@media only screen and(max-width: 1080px) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}

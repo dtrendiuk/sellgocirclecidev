@@ -1,0 +1,66 @@
+@import '../../../styles/guidelines';
+
+.blogsPage {
+	margin: 5rem auto;
+	margin-bottom: 15rem;
+	min-height: 110vh;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: #707070;
+	margin: 2rem auto;
+}
+
+.banner {
+	background: linear-gradient(180deg, #f99e4e, #7d4f27);
+	border-radius: 7px;
+	min-height: 14.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $prim_white;
+	padding: 3rem 5rem;
+
+	@media only screen and(max-width: 900px) {
+		flex-direction: column;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	&__left {
+		flex: 1;
+		h3 {
+			font-size: $fontsize_subtitle_32;
+			color: inherit;
+		}
+
+		p {
+			font-size: $fontsize_content_14;
+			color: inherit;
+			font-weight: $fontweight_regular;
+		}
+	}
+
+	&__right {
+		@media only screen and(max-width: 900px) {
+			margin-top: 2rem;
+		}
+
+		button {
+			height: 5rem;
+			color: $second_grey;
+			border: 0;
+			outline: 0;
+			background: $prim_white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 21rem;
+			border-radius: 7px;
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
+	}
+}

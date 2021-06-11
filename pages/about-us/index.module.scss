@@ -1,0 +1,149 @@
+@import '../../styles/guidelines';
+
+.aboutUs {
+	margin: 10rem auto;
+	min-height: 100vh;
+}
+
+.welcomeSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: $prim_dark_2;
+	margin-bottom: 20rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__text {
+		flex: 0 0 45%;
+		h1 {
+			font-size: $fontsize_subtitle_32;
+			font-weight: $fontweight_extrabold;
+			margin-bottom: 2rem;
+			span {
+				color: $accent_orange;
+			}
+		}
+
+		p {
+			font-size: $fontsize_content_14;
+			color: inherit;
+			margin-bottom: 2rem;
+		}
+
+		@media only screen and(max-width: 1080px) {
+			order: 2;
+		}
+	}
+
+	&__image {
+		flex: 0 0 45%;
+
+		@media only screen and(max-width: 1080px) {
+			order: 1;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.contentSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	color: $prim_dark_2;
+	margin-bottom: 30rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 15rem;
+	}
+
+	&__text {
+		flex: 0 0 45%;
+
+		h2 {
+			font-size: $fontsize_subtitle_28;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: $fontsize_content_14;
+			margin-bottom: 2rem;
+		}
+
+		&__reversed {
+			order: 2;
+		}
+
+		@media only screen and(max-width: 1080px) {
+			order: 2;
+		}
+	}
+
+	&__image {
+		flex: 0 0 45%;
+		@media only screen and(max-width: 1080px) {
+			order: 1;
+		}
+	}
+}
+
+.aboutUsCTA {
+	min-width: 15rem;
+	@media only screen and(max-width: 1080px) {
+		margin: 0 auto;
+	}
+}
+
+.queryCardsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.queryCard {
+	width: 34rem;
+	border: 1px solid $grey_2;
+	border-radius: 3px;
+	text-align: center;
+	color: $prim_dark_2;
+	height: 27rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	@media only screen and(max-width: 1080px) {
+		margin: 3rem auto;
+	}
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+	}
+
+	&__links {
+		margin: 1rem auto;
+		min-height: 5rem;
+
+		p {
+			margin: 1rem 0;
+			font-size: $fontsize_content_12;
+		}
+
+		a {
+			text-decoration: underline;
+			font-size: $fontsize_content_12;
+		}
+	}
+}

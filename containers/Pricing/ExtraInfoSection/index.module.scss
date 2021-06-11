@@ -1,0 +1,66 @@
+@import '../../../styles/guidelines';
+
+.extraInfoSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10rem;
+	margin-bottom: 20rem;
+
+	@media only screen and(max-width: 850px) {
+		flex-direction: column;
+	}
+
+	&__Image {
+		flex: 0 0 45%;
+		min-height: 25rem;
+		border: 1px solid #000;
+		@media only screen and(max-width: 850px) {
+			min-width: 30rem;
+			margin-bottom: 5rem;
+		}
+	}
+
+	&__Details {
+		flex: 0 0 45%;
+		align-self: flex-end;
+		text-align: left;
+		color: $prim_dark_2;
+	}
+}
+
+.title {
+	text-transform: uppercase;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_medium;
+}
+
+.subTitle {
+	font-size: $fontsize_subtitle_32;
+	font-weight: $fontweight_extrabold;
+	color: inherit;
+}
+
+.description {
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_regular;
+	color: inherit;
+	line-height: $fontlineheight_content_30;
+}
+
+.extraInfoWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	margin: 3rem auto;
+}
+
+.extraInfo {
+	color: inherit;
+	h4 {
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+		margin-bottom: 5px;
+	}
+}

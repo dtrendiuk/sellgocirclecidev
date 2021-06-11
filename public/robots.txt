@@ -1,0 +1,3 @@
+User-agent: *
+Allow: *
+Sitemap: https://sellgo.com/sitemap.xml

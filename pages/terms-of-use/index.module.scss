@@ -1,0 +1,23 @@
+@import '../../styles/guidelines';
+
+.termsPage {
+	min-height: 80vh;
+	margin: 5rem auto;
+	color: $prim_dark_2;
+	font-size: 14px;
+
+	h1 {
+		font-size: 3.5rem;
+		text-align: center;
+		margin: 4rem auto;
+		color: inherit;
+	}
+
+	article {
+		padding: 3rem;
+		border-radius: 10px;
+		@media only screen and(max-width: 900px) {
+			padding: 0;
+		}
+	}
+}

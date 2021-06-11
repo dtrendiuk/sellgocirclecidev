@@ -1,0 +1,54 @@
+@import '../../styles/guidelines';
+
+.queryCardsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 20rem auto;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 1080px) {
+		margin-top: 5rem;
+	}
+}
+
+.queryCard {
+	width: 34rem;
+	border: 1px solid $grey_2;
+	border-radius: 3px;
+	text-align: center;
+	color: $prim_dark_2;
+	height: 27rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	@media only screen and(max-width: 1080px) {
+		margin: 3rem auto;
+	}
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_bold;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+	}
+
+	&__links {
+		margin: 1rem auto;
+		min-height: 5rem;
+
+		p {
+			margin: 1rem 0;
+			font-size: $fontsize_content_12;
+		}
+
+		a {
+			text-decoration: underline;
+			font-size: $fontsize_content_12;
+			color: $system_blue;
+		}
+	}
+}

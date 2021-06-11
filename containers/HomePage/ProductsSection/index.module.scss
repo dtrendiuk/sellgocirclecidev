@@ -1,0 +1,17 @@
+@import '../../../styles/guidelines';
+
+.productsSection {
+	min-height: 100vh;
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+
+.productsWrapper {
+	margin: 10rem auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.productsSectionCTA {
+	margin: 4rem auto;
+}

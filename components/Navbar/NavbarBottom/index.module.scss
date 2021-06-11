@@ -1,0 +1,143 @@
+@import '../../../styles/guidelines';
+
+.navbarBottom {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3rem;
+	padding-bottom: 1.5rem;
+
+	&__left {
+		flex: 1;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.expandedProductsNavbar {
+	position: absolute;
+	top: 2rem;
+	left: -15rem;
+	border-radius: 5px;
+	min-width: 108rem;
+	max-width: 108rem;
+	overflow: hidden;
+	padding: 2.2rem 2rem;
+	z-index: 999;
+	max-height: 50rem;
+	will-change: transform;
+	display: none;
+	visibility: none;
+
+	@media only screen and(max-width: 1620px) {
+		width: 100vw;
+		top: 9.3rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+		min-width: unset;
+	}
+}
+
+.expandedResourcesNavbar {
+	width: 38rem;
+	min-height: 30rem;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 2.2rem 0;
+	z-index: 999;
+	will-change: transform;
+	position: absolute;
+	top: 2rem;
+	left: -5rem;
+	display: none;
+	visibility: none;
+
+	@media only screen and(max-width: 1620px) {
+		width: max-content;
+		margin: 0 auto;
+		left: 50%;
+		top: 9.3rem;
+		transform: translateX(-15rem);
+	}
+
+	@media only screen and(max-width: 1080px) {
+		transform: translateX(-2rem);
+	}
+}
+
+.navbarBottomLinksList {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	// flex: 1;
+	margin-left: 4rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex: 1;
+	}
+}
+
+.navbarBottomLink {
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	cursor: pointer;
+	position: relative;
+	margin: 0 4rem;
+
+	@media only screen and(max-width: 1620px) {
+		position: unset !important;
+	}
+
+	&:hover {
+		.expandedProductsNavbar {
+			display: block;
+		}
+
+		.expandedResourcesNavbar {
+			display: block;
+		}
+	}
+}
+
+.navLink {
+	color: $prim_dark_2;
+	font-weight: $fontweight_semibold;
+	position: relative;
+	width: max-content;
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		margin-left: 4px;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 4px;
+		background: #707070;
+		position: absolute;
+		bottom: -2rem;
+		transform: scaleX(0);
+		transition: transform 0.2s ease-in-out;
+	}
+
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+.navbarCTA {
+	justify-self: flex-end;
+}

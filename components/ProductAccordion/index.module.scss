@@ -1,0 +1,58 @@
+@import '../../styles/guidelines';
+
+.productAccordion {
+	width: 43rem;
+	margin: 4rem 0;
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
+}
+
+.productAccordionItem {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.productAccordionHeading {
+	cursor: pointer;
+	border: 1px solid $grey_2;
+	padding: 1.2rem 2rem;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+}
+
+.productAccordionButton {
+	&:focus-visible {
+		outline: none;
+	}
+
+	p {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		span {
+			color: $blue_7;
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+}
+
+.productAccordionPanel {
+	text-align: left;
+	padding: 1.5rem 2rem;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	border: 1px solid $grey_2;
+	border-top: 0;
+
+	ul {
+		list-style-type: none;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		li::before {
+			content: '-';
+		}
+	}
+}

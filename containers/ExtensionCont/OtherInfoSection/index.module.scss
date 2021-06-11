@@ -1,0 +1,66 @@
+@import '../../../styles/guidelines';
+
+.otherInfoSection {
+	margin: 5rem auto;
+	color: $prim_dark_2;
+}
+
+.sectionHeading {
+	font-size: $fontsize_subtitle_38;
+	text-align: center;
+	color: inherit;
+	font-weight: $fontweight_bold;
+	margin: 0 auto;
+}
+
+.sectionDesc {
+	font-size: $fontsize_content_16;
+	color: inherit;
+	font-weight: $fontweight_regular;
+	text-align: center;
+	margin: 3rem auto;
+	max-width: 80rem;
+	margin-bottom: 5rem;
+}
+
+.cardsSectionWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
+}
+
+.cardsWrapper {
+	min-width: 33rem;
+
+	&__Card {
+		border: 1px solid $grey_2;
+		border-radius: 3px;
+		min-width: 100%;
+		min-height: 40rem;
+	}
+
+	&__Text {
+		text-align: center;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_medium;
+		margin-top: 1rem;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		margin: 3rem auto;
+	}
+
+	@media only screen and(max-width: 500px) {
+		min-width: 100%;
+		max-width: 100%;
+	}
+}
+
+.otherInfoSectionCTA {
+	margin: 3rem auto;
+}

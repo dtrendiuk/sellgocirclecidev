@@ -1,0 +1,22 @@
+@import '../../../styles/guidelines';
+
+.shareBlogs {
+	color: $prim_dark_2;
+	margin: 10rem auto;
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		text-align: center;
+	}
+}
+
+.shareLinksWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	margin-top: 3rem;
+}
+
+.shareButton {
+	margin: 0 20px;
+}

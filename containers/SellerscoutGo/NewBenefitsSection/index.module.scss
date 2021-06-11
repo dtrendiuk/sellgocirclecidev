@@ -1,0 +1,20 @@
+@import '../../../styles/guidelines';
+
+.newBenefitsSection {
+	min-height: 100vh;
+	background: $grey_0;
+}
+
+.benefitsWrapper {
+	padding: 10rem 0;
+}
+
+.benefitsCardsWrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 10rem auto;
+}
+
+.newBenefitsCTA {
+	margin: 4rem auto;
+}

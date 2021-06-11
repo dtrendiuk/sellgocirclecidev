@@ -1,0 +1,17 @@
+@import '../../../styles/guidelines';
+
+.blogsCategorySection {
+	margin: 4rem auto;
+}
+
+.categoryBlogsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5rem auto;
+
+	@media only screen and(max-width: 1080px) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}

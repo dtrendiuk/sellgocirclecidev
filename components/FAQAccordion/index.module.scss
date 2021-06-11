@@ -1,0 +1,66 @@
+@import '../../styles/guidelines';
+
+.faqAccordion {
+	width: 100%;
+
+	&__HorizontalFocus {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 4rem;
+
+		@media only screen and(max-width: 800px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.faqAccordionItem {
+	cursor: pointer;
+	margin: 2rem 0;
+	width: 100%;
+
+	&__HorizontalFocus {
+		flex: 0 0 45%;
+		margin-bottom: 3rem;
+		cursor: pointer;
+		@media only screen and(max-width: 800px) {
+			width: 100%;
+		}
+	}
+}
+
+.faqAccordionHeading {
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_medium;
+	color: $prim_dark_2;
+	border: 1px solid $grey_2;
+	padding: 1.5rem 2rem;
+}
+
+.faqAccordionButton {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	span {
+		color: $blue_8;
+		font-size: 20px;
+		margin-right: 1rem;
+		font-weight: 600;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.faqAccordionPanel {
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_regular;
+	color: $prim_dark_2;
+	padding: 1rem 2rem;
+	border: 1px solid $grey_2;
+	border-top: 0;
+}

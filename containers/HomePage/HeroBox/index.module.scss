@@ -1,0 +1,96 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	min-height: 90vh;
+
+	@media only screen and(min-width: 320px) {
+		background: url('/heroboxBg.png'), linear-gradient(180deg, #2f8ddf, #184770);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	// fallback to simple gradient
+	background: linear-gradient(180deg, #2f8ddf, #184770);
+}
+
+.herobox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $prim_white;
+	min-height: 80vh;
+	position: relative;
+}
+
+.heroboxText {
+	width: 50%;
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.heroboxImage {
+	// mobile first approach to avoid network call to image <1080px screens
+	right: -20rem;
+	display: none;
+
+	@media only screen and(min-width: 1080px) {
+		display: block;
+	}
+
+	@media only screen and(min-width: 1200px) {
+		position: static;
+	}
+
+	@media only screen and(min-width: 1300px) {
+		position: absolute;
+		right: -5rem;
+	}
+
+	@media only screen and(min-width: 1500px) {
+		right: -10rem;
+		width: auto;
+		height: 50rem;
+	}
+}
+
+.heading {
+	font-size: $fontsize_title_46;
+	font-weight: $fontweight_bold;
+	line-height: $fontlineheight_heading_70;
+
+	@media only screen and(max-width: 650px) {
+		font-size: 4.5rem;
+		line-height: 1.2;
+	}
+}
+
+.tagline {
+	font-size: $fontsize_content_14;
+	line-height: $fontlineheight_content_30;
+	font-weight: $fontweight_regular;
+	margin: 2rem 0;
+	width: 80%;
+	color: $prim_white;
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.ctaHeroBox {
+	@media only screen and(max-width: 1080px) {
+		margin: 0 auto;
+	}
+}
+
+.ctaOverText {
+	font-size: $fontsize_content_12;
+	margin-top: 2rem;
+	display: inline-block;
+	line-height: $fontlineheight_content_20;
+	font-weight: $fontweight_regular;
+}

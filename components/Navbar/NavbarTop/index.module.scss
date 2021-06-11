@@ -1,0 +1,37 @@
+@import '../../../styles/guidelines';
+
+.navbarTop {
+	color: $prim_dark_2;
+	font-weight: $fontweight_bold;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbarTopLinksList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media only screen and(max-width: 950px) {
+		display: none;
+		visibility: none;
+	}
+}
+
+.navbarLink {
+	color: $prim_dark_2;
+	&__sales {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $prim_dark_2;
+		span {
+			margin-left: 10px;
+		}
+	}
+}
+
+.navbarTopLink {
+	margin-left: 4rem;
+}

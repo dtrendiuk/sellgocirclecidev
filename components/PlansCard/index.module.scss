@@ -1,0 +1,72 @@
+@import '../../styles/guidelines';
+
+.plansCard {
+	border: 1px solid $grey_2;
+	background: $prim_white;
+	color: $second_grey;
+	text-align: center;
+	width: 25rem;
+	min-height: 20rem;
+	position: relative;
+	border-bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+
+	@media only screen and(max-width: 1080px) {
+		margin-bottom: 3rem;
+	}
+
+	button {
+		width: 100%;
+		outline: 0;
+		background: $prim_white;
+		color: $blue_8;
+		border: 0;
+		border-top: 1px solid $grey_2;
+		border-bottom: 1px solid $grey_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5rem;
+		font-size: $fontsize_content_14;
+		cursor: pointer;
+		span {
+			margin-left: 2rem;
+			font-size: 20px;
+		}
+	}
+}
+
+.plansCard__Content {
+	min-height: 15rem;
+	width: 100%;
+	color: inherit;
+	h3 {
+		color: $prim_dark_2;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_medium;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	small,
+	p {
+		color: inherit;
+		font-size: $fontsize_content_12;
+	}
+}
+
+.popularFeaturesList {
+	font-size: $fontsize_content_14;
+	border-bottom: 1px solid $grey_2;
+	width: 100%;
+	text-align: left;
+	padding: 2rem;
+	min-height: 12rem;
+	li {
+		margin: 0.5rem auto;
+		font-weight: $fontweight_semibold;
+	}
+}

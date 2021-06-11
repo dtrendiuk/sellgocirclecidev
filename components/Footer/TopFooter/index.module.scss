@@ -1,0 +1,54 @@
+@import '../../../styles/guidelines';
+
+.topFooter {
+	min-height: 30rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 2rem 0;
+
+	@media only screen and(max-width: 800px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.logoWrapper {
+	display: flex;
+	flex-direction: column;
+	color: $prim_white;
+	list-style: none;
+
+	@media only screen and(max-width: 800px) {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	@media only screen and(max-width: 500px) {
+		flex-direction: column;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	a {
+		margin-top: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.footerNavigation {
+	color: $prim_white;
+	list-style: none;
+	font-weight: 400;
+	text-align: left;
+
+	@media only screen and(max-width: 800px) {
+		width: 100%;
+		text-align: center;
+	}
+}

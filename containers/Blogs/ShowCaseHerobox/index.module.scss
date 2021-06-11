@@ -1,0 +1,33 @@
+@import '../../../styles/guidelines';
+
+.heroBoxWrapper {
+	background: linear-gradient(180deg, $blue_6, #23537d);
+	min-height: 40rem;
+	padding: 6rem 0;
+}
+
+.heroBoxContent {
+	color: $prim_white;
+	text-align: center;
+
+	h1 {
+		font-size: $fontsize_title_46;
+
+		@media only screen and(max-width: 500px) {
+			font-size: 4rem;
+		}
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: inherit;
+		margin: 4rem auto;
+		max-width: 87rem;
+	}
+}
+
+.subscribeCTA {
+	width: 21rem;
+	margin: 0 auto;
+	cursor: pointer;
+}

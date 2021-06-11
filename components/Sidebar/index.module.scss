@@ -1,0 +1,37 @@
+@import '../../styles/guidelines';
+
+.sidebar {
+	@media only screen and(min-width: 951px) {
+		display: none;
+	}
+}
+
+.closeSidebar {
+	display: none;
+	visibility: none;
+	@media only screen and(min-width: 951px) {
+		display: none;
+	}
+}
+
+.close {
+	z-index: 100 !important;
+	position: fixed;
+	top: 1.2rem;
+	right: 2rem;
+	cursor: pointer;
+	width: max-content;
+	height: max-content;
+}
+
+.accountDetails {
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2rem;
+	width: 285px;
+	transform: translateX(-50%);
+}

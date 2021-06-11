@@ -1,0 +1,46 @@
+@import '../../../styles/guidelines';
+
+.statisticsSection {
+	background: linear-gradient(180deg, $blue_6, #184770);
+	display: flex;
+	margin-bottom: 10rem;
+}
+
+.statisticsWrapper {
+	color: $prim_white;
+	height: 100%;
+	padding: 15rem 0;
+	text-align: center;
+
+	h2 {
+		color: inherit;
+		margin-bottom: 2rem;
+	}
+
+	p {
+		color: inherit;
+		font-size: $fontsize_content_14;
+		font-weight: fontweight_regular;
+		line-height: $fontlineheight_content_30;
+		width: 85%;
+		margin: 0 auto;
+
+		@media only screen and(max-width: 650px) {
+			width: 80%;
+		}
+	}
+}
+
+.statisticsGrid {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	margin: 8rem auto;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 890px) {
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+}

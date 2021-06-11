@@ -1,0 +1,75 @@
+//  Custom styles for the react-select component on the demo page */
+
+#dropdown {
+	position: relative !important;
+
+	.dropdown__control {
+		height: 4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid #c0c0c0;
+		background: #ebeef0;
+		font-size: 14px;
+		color: #2e3b4a;
+		box-shadow: none !important;
+
+		.dropdown__value-container {
+			height: 100%;
+		}
+
+		.dropdown__indicators {
+			.dropdown__indicator-separator {
+				display: none;
+			}
+			.dropdown__indicator {
+				svg {
+					path {
+						fill: #2f8ddf;
+					}
+				}
+			}
+		}
+	}
+
+	.dropdown__menu {
+		position: absolute;
+		top: 4rem !important;
+		background: #ebeef0;
+
+		::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+	}
+
+	.drodown__menu--list {
+		background: #ebeef0;
+		padding: 0;
+		margin: 0;
+	}
+
+	.dropdown__option {
+		background: #ebeef0;
+		color: #2e3b4a;
+		cursor: pointer;
+
+		&:hover {
+			font-weight: 500;
+		}
+	}
+}

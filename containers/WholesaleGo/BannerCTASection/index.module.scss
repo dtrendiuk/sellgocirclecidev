@@ -1,0 +1,104 @@
+@import '../../../styles/guidelines';
+
+.bannerCTASectionWrapper {
+	margin-bottom: 5rem;
+	position: relative;
+}
+
+.background {
+	background: $prim_dark_1;
+	height: 35rem;
+	position: absolute;
+	top: 4rem;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	@media only screen and(max-width: 1080px) {
+		height: 90%;
+	}
+}
+
+.bannerCTASection {
+	color: $prim_white;
+	text-align: center;
+
+	h2 {
+		color: inherit;
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		margin-top: 4rem;
+	}
+
+	p {
+		color: inherit;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		margin-top: 1rem;
+	}
+}
+
+.capsule {
+	background: $prim_white;
+	height: 7rem;
+	width: 45rem;
+	border-radius: 10rem;
+	border: 1px solid #707070;
+	margin: 0 auto;
+	color: $prim_dark_2;
+
+	p {
+		font-weight: $fontweight_semibold;
+	}
+	a {
+		text-decoration: underline;
+	}
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+	}
+}
+
+.ctaBannerCardsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 6rem;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
+}
+
+.ctaBannerCard {
+	width: 34rem;
+	height: 23rem;
+	background: $prim_white;
+	border: 1px solid $grey_2;
+	color: $prim_dark_2;
+	padding: 2rem 0;
+	border-radius: 5px;
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		max-width: 29rem;
+		margin: 0 auto;
+		margin-top: 1.5rem;
+		font-weight: $fontweight_medium;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		margin-bottom: 2rem;
+	}
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+		min-width: 30rem;
+	}
+}

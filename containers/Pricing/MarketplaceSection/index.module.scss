@@ -1,0 +1,37 @@
+@import '../../../styles/guidelines';
+
+.marketplaceSection {
+	margin: 10rem auto;
+	padding: 2rem;
+	text-align: left;
+	color: $prim_dark_2;
+
+	@media only screen and(max-width: 450px) {
+		padding: 0;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: $fontsize_subtitle_20;
+		color: $second_darkgrey;
+		font-weight: $fontweight_regular;
+	}
+
+	h3 {
+		font-size: $fontsize_subtitle_32;
+	}
+
+	p {
+		color: $second_grey;
+		font-size: $fontsize_content_14;
+		max-width: 38rem;
+		margin-top: 1rem;
+	}
+}
+
+.marketplaceCTA {
+	margin: 3rem 0;
+	span {
+		margin-right: 6px;
+	}
+}

@@ -1,0 +1,47 @@
+@import '../../../styles/guidelines';
+
+.categoryBlogCard {
+	min-width: 25.6rem;
+	max-width: 25.6rem;
+	width: 25.6rem;
+	border-radius: 7px;
+	overflow: hidden;
+	margin: 2rem auto;
+
+	@media only screen and(max-width: 600px) {
+		width: 100%;
+		min-height: auto;
+		height: auto;
+		max-width: auto;
+	}
+
+	&__Image {
+		position: relative;
+		min-height: 14.8rem;
+		max-height: 14.8rem;
+		width: 100%;
+		z-index: -1;
+		@media only screen and(max-width: 600px) {
+			height: auto;
+		}
+	}
+
+	&__Text {
+		min-height: 13.7rem;
+		padding: 2rem;
+		background: $orange_5;
+		color: $prim_white;
+
+		h3 {
+			font-size: $fontsize_subtitle_32;
+			color: inherit;
+			font-weight: $fontweight_regular;
+		}
+
+		p {
+			font-size: $fontsize_content_14;
+			color: inherit;
+			font-weight: $fontweight_semibold;
+		}
+	}
+}

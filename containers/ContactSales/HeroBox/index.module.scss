@@ -1,0 +1,127 @@
+@import '../../../styles/guidelines';
+
+.heroBoxWrapper {
+	background: linear-gradient(180deg, #256fb0, #133858);
+}
+
+.heroBox {
+	color: $prim_white;
+	padding-top: 10rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: relative;
+	min-height: 54rem;
+
+	@media only screen and(max-width: 1080px) {
+		position: unset;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 0;
+		height: auto;
+	}
+
+	&__text {
+		flex: 0 0 45%;
+
+		@media only screen and(max-width: 1080px) {
+			order: 2;
+			width: 100%;
+			margin: 6rem 0;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: $fontsize_title_54;
+			font-weight: $fontweight_bold;
+			line-height: $fontlineheight_heading_70;
+
+			@media only screen and(max-width: 750px) {
+				font-size: 4.5rem;
+			}
+		}
+
+		p {
+			max-width: 54rem;
+			font-size: $fontsize_content_14;
+			color: $prim_white;
+			font-weight: $fontweight_regular;
+			margin-top: 1rem;
+
+			@media only screen and(max-width: 1080px) {
+				text-align: center;
+				margin: 1rem auto;
+			}
+		}
+	}
+
+	&__image {
+		align-self: flex-end;
+		display: none;
+
+		// mobile first approach to avoid network call to image <750px screens
+
+		@media only screen and(min-width: 750px) {
+			display: block;
+			margin: 0 auto;
+		}
+
+		@media only screen and(min-width: 1080px) {
+			align-self: center;
+			order: 1;
+			position: absolute;
+			bottom: -0.4rem;
+			right: 0;
+		}
+
+		@media only screen and(min-width: 1500px) {
+			right: -8rem;
+		}
+	}
+}
+
+.heroBoxCards {
+	position: relative;
+	@media only screen and(max-width: 1300px) {
+		position: unset;
+		margin: 5rem auto;
+	}
+}
+
+.contactCardsWrapper {
+	display: flex;
+	position: absolute;
+	top: -10rem;
+
+	@media only screen and(max-width: 1300px) {
+		position: static;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+
+	@media only screen and(max-width: 750px) {
+		flex-wrap: wrap;
+	}
+}
+
+.contactCard {
+	background: $grey_1;
+	width: 34rem;
+	height: 23rem;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 1rem;
+
+	@media only screen and(max-width: 750px) {
+		margin: 2rem auto;
+	}
+
+	a {
+		cursor: pointer;
+		width: 21rem;
+	}
+}

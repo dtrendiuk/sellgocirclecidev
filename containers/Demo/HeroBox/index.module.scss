@@ -1,0 +1,54 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	min-height: 48rem;
+	color: $prim_white;
+	background: linear-gradient(180deg, #256fb0, #133858);
+	padding-top: 10rem;
+
+	@media only screen and (max-width: 1080px) {
+		text-align: center;
+		padding-top: 10rem;
+	}
+
+	@media only screen and (max-width: 500px) {
+		padding-top: 6rem;
+		padding-bottom: 8rem;
+	}
+
+	h1 {
+		color: inherit;
+		max-width: 56rem;
+		font-size: $fontsize_title_54;
+		font-weight: $fontweight_bold;
+		line-height: $fontlineheight_heading_70;
+		@media only screen and (max-width: 1080px) {
+			max-width: 80%;
+			margin: 0 auto;
+		}
+
+		@media only screen and(max-width: 700px) {
+			max-width: 100%;
+		}
+	}
+
+	p {
+		max-width: 51rem;
+		color: inherit;
+		margin-top: 2rem;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		@media only screen and (max-width: 1080px) {
+			max-width: 80%;
+			margin: 2rem auto;
+		}
+
+		@media only screen and(max-width: 700px) {
+			max-width: 100%;
+		}
+	}
+}
+
+.selectInput {
+	width: 100%;
+}

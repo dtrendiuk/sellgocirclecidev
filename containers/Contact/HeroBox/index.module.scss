@@ -1,0 +1,129 @@
+@import '../../../styles/guidelines';
+
+.heroBoxSection {
+	background: linear-gradient(180deg, #256fb0, #133858);
+}
+
+.heroBox {
+	min-height: 54rem;
+	color: $prim_white;
+	padding-top: 13rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+
+	@media only screen and(max-width: 1080px) {
+		position: static;
+		flex-direction: column;
+		align-items: center;
+		padding: 10rem 0;
+	}
+
+	&__text {
+		@media only screen and(max-width: 500px) {
+			width: 100%;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: $fontsize_subtitle_40;
+			color: inherit;
+		}
+
+		p {
+			color: inherit;
+			max-width: 39.6rem;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_light;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.requestDemoCard {
+	width: 34rem;
+	min-height: 23rem;
+	border-radius: $prim_white;
+	border-radius: 5px;
+	background: $grey_0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	bottom: -10rem;
+	box-shadow: $box-shadow-1;
+
+	@media only screen and(max-width: 1080px) {
+		position: static;
+		margin: 4rem auto;
+		width: 43rem;
+	}
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+	}
+
+	svg {
+		margin: 0 auto;
+	}
+
+	&__CTA {
+		width: 21rem;
+		margin: 0 auto;
+	}
+}
+
+.contactCard {
+	background: $grey_0;
+	border-radius: 7px;
+	width: 43rem;
+	min-height: 24.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	box-shadow: $box-shadow-1;
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+	}
+
+	h2 {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_18;
+		font-weight: $fontweight_bold;
+	}
+
+	a {
+		font-size: $fontsize_content_18;
+		color: $system_blue;
+		font-weight: $fontweight_extrabold;
+	}
+}
+
+.chat {
+	background: $orange_1;
+	min-height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 36rem;
+	border-radius: 7px;
+
+	@media only screen and(max-width: 500px) {
+		width: 90%;
+		padding: 1rem;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: $prim-dark_2;
+		a {
+			font-size: $fontsize_content_14;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+@import '../../../styles/guidelines';
+
+.pricingCardHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__Left {
+		text-align: center;
+		margin-top: 2rem;
+		width: 100%;
+		color: $prim_dark_2;
+		h2 {
+			font-size: $fontsize_subtitle_20;
+			font-weight: $fontweight_bold;
+		}
+
+		p {
+			font-size: $fontsize_content_10;
+			font-weight: $fontweight_regular;
+			color: $grey_5;
+			max-width: 20rem;
+			margin: 0 auto;
+			text-align: center;
+			white-space: pre-line;
+		}
+	}
+}
+
+.pricePerDay {
+	text-align: center;
+	margin-top: 1rem;
+	h3 {
+		color: $blue_7;
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+	}
+
+	p {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_10;
+	}
+}
+
+.productsDatabase {
+	font-size: $fontsize_content_10;
+	margin-top: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	a {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: inherit;
+		margin-left: 5px;
+		span {
+			margin-right: 5px;
+		}
+	}
+}
+
+.buyNameCTA {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	width: 100%;
+}

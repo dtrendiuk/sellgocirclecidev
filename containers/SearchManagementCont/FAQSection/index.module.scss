@@ -1,0 +1,14 @@
+@import '../../../styles/guidelines';
+
+.faqSection {
+	color: $prim_dark_2;
+	margin: 6rem auto;
+	padding: 6rem 0;
+
+	h2 {
+		color: inherit;
+		font-size: $fontsize_subtitle_28;
+		font-weight: $fontweight_bold;
+		text-align: center;
+	}
+}

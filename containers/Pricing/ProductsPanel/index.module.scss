@@ -1,0 +1,71 @@
+@import '../../../styles/guidelines';
+
+.pricingPanelTabsWrapper {
+	width: 100%;
+	min-height: 7.5rem;
+}
+
+.pricingPanelTabList {
+	list-style: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $prim_dark_2;
+	max-width: 100%;
+	margin: 0 auto;
+	border-bottom: 1px solid $second_silver;
+	box-shadow: $box-shadow-2;
+
+	// @media only screen and(max-width: 980px) {
+	// 	justify-content: space-between;
+	// }
+
+	@media only screen and(max-width: 700px) {
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+}
+
+.pricingPanelTab {
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_medium;
+	color: inherit;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	cursor: pointer;
+	min-width: 19.3rem;
+	position: relative;
+
+	@media only screen and(max-width: 980px) {
+		padding: 2rem;
+		// width: max-content;
+		// min-width: auto;
+	}
+
+	// @media only screen and(max-width: 700px) {
+	// 	width: max-content;
+	// }
+
+	&__Selected {
+		border-bottom: 2px solid #707070;
+		background: $blue_1;
+		font-weight: $fontweight_semibold;
+	}
+}
+
+.newBadge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: $system_green;
+	color: $system_cream;
+	border-radius: 15px;
+	width: 4.3rem;
+	height: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: $fontsize_content_12;
+}

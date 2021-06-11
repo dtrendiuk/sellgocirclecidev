@@ -1,0 +1,16 @@
+@import '../../styles/guidelines';
+
+.header {
+	text-align: center;
+	box-shadow: $box-shadow-2;
+	margin-bottom: 3px;
+}
+
+.navbar {
+	min-height: auto;
+
+	@media only screen and(max-width: 950px) {
+		display: none;
+		visibility: 0;
+	}
+}

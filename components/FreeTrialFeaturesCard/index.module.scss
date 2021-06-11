@@ -1,0 +1,78 @@
+@import '../../styles/guidelines';
+
+.featuresCard {
+	border: 1px solid $grey_2;
+	width: 34rem;
+	color: $prim_dark_2;
+	border-radius: 7px;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 0;
+	margin: 0 1rem;
+
+	@media only screen and(max-width: 1200px) {
+		margin-bottom: 3rem;
+	}
+
+	button {
+		width: 100%;
+		outline: 0;
+		background: $prim_white;
+		color: $blue_8;
+		border: 0;
+		border-top: 1px solid $grey_2;
+		border-bottom: 1px solid $grey_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5rem;
+		font-size: $fontsize_content_14;
+		cursor: pointer;
+		span {
+			margin-left: 2rem;
+			font-size: 20px;
+		}
+	}
+}
+
+.featuresCard__Content {
+	min-height: 35rem;
+	width: 100%;
+	color: inherit;
+	padding: 2rem;
+	h3 {
+		color: $prim_dark_2;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_medium;
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		margin-top: 2.5rem;
+		font-size: $fontsize_content_14;
+		li {
+			margin-bottom: 1rem;
+			span {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.popularFeaturesList {
+	font-size: $fontsize_content_12;
+	border-bottom: 1px solid $grey_2;
+	width: 100%;
+	text-align: left;
+	padding: 2rem;
+	min-height: 10rem;
+	li {
+		margin: 0.5rem auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		span {
+			margin-left: 8px;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@import '../../../styles/guidelines';
+
+.heroboxSection {
+	background: linear-gradient(180deg, $blue_8, #133858);
+	min-height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $prim_white;
+	flex-direction: column;
+	position: relative;
+	text-align: center;
+
+	h1 {
+		font-size: $fontsize_subtitle_28;
+		font-weight: $fontweight_bold;
+		color: inherit;
+		width: 90%;
+	}
+
+	p {
+		color: inherit;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		margin-bottom: 4rem;
+		width: 90%;
+	}
+}
+
+.tabsWrapper {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab {
+	background: $prim_white;
+	color: $prim_dark_2;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_semibold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+	min-width: 19.3rem;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	font-family: 'Work Sans', sans-serif;
+	border-left: 1px solid $prim_white;
+	border-bottom: 1px solid $prim_white;
+
+	&__pricing {
+		// border-radius: 4px 0 0 0;
+		border-radius: 4px 4px 0 0;
+	}
+
+	&__bundles {
+		border-radius: 0 4px 0 0;
+	}
+
+	&__disabled {
+		background: $grey_1;
+		color: $grey_7;
+		border-left: 1px solid $grey_1;
+		border-bottom: 1px solid $grey_1;
+		font-weight: $fontweight_regular;
+	}
+
+	@media only screen and(max-width: 500px) {
+		width: max-content;
+		font-size: 1.4rem;
+		height: 5rem;
+		min-width: 15rem;
+	}
+}

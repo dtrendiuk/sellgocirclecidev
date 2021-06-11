@@ -1,0 +1,71 @@
+@import '../../styles/guidelines';
+
+.infoCard {
+	box-shadow: $box-shadow-1;
+	min-height: 42rem;
+	border-radius: 7px;
+	background: $prim_white;
+	width: 34rem;
+	padding: 4rem;
+	text-align: left;
+	margin-bottom: 5rem;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.infoCardLabel {
+	background: $blue_6;
+	color: $prim_white;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	position: absolute;
+	top: 10px;
+	z-index: 10;
+	right: 0;
+	font-size: $fontsize_content_10;
+	font-weight: $fontweight_semibold;
+	width: 8rem;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.infoCardTitle {
+	color: $prim_dark_2;
+	font-size: $fontsize_subtitle_20;
+	text-align: center;
+}
+
+.infoCardDesc {
+	font-size: $fontsize_content_12;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+
+.featureTitle {
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_medium;
+	margin-bottom: 2rem;
+}
+
+.featuresList {
+	list-style: none;
+}
+
+.feature {
+	list-style: none;
+	color: $prim_dark_2;
+	font-size: $fontsize_content_12;
+	margin: 1rem 0;
+}
+
+.featureName {
+	margin-left: 5px;
+}
+
+.featureCTA {
+	width: 80%;
+	margin: 3rem auto;
+	margin-bottom: 0;
+}

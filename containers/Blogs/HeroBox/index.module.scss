@@ -1,0 +1,128 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	width: 100%;
+	background: linear-gradient(180deg, #45a5f9, #23537d);
+	color: $prim_white;
+}
+
+.herobox {
+	color: inherit;
+	min-height: 50rem;
+	display: flex;
+	justify-content: space-between;
+
+	&__Left {
+		flex: 0 0 50%;
+		height: 100%;
+		text-align: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6rem;
+		@media only screen and(max-width: 1080px) {
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex: 1;
+		}
+	}
+
+	&__Right {
+		flex: 0 0 40%;
+		background: $prim_white;
+		min-width: 30rem;
+		min-height: 50rem;
+		z-index: 1;
+		overflow: hidden;
+		display: none;
+
+		// follow mobile first to avoid img network call on screens < 1080px
+		@media only screen and(min-width: 1080px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.contentWrapper {
+	margin-left: 30rem;
+	height: 100%;
+	padding-bottom: 3rem;
+	min-height: 5rem;
+
+	@media only screen and(max-width: 1600px) {
+		margin-left: 12rem;
+	}
+
+	@media only screen and(max-width: 1200px) {
+		margin-left: 10rem;
+	}
+
+	@media only screen and(max-width: 700px) {
+		width: 90%;
+		margin: 0 auto !important;
+		margin-left: 0;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1 {
+		font-size: $fontsize_title_46;
+
+		@media only screen and(max-width: 700px) {
+			font-size: $fontsize_subtitle_32;
+		}
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: inherit;
+		margin: 2rem 0;
+		width: 70%;
+		font-weight: $fontweight_regular;
+		span {
+			font-weight: $fontweight_semibold;
+		}
+
+		@media only screen and(max-width: 1080px) {
+			margin: 2rem auto;
+		}
+	}
+}
+
+.summary {
+	p {
+		@media only screen and(max-width: 600px) {
+			max-width: 100%;
+			margin: 2rem 0;
+			width: 100%;
+		}
+	}
+}
+
+.rect {
+	background: $prim_white;
+	border-radius: 7px;
+	margin: 4rem 0;
+	width: 48rem;
+	height: 21rem;
+
+	@media only screen and(max-width: 1080px) {
+		margin: 4rem auto;
+	}
+
+	@media only screen and(max-width: 700px) {
+		margin: 4rem auto;
+		width: 100%;
+	}
+}

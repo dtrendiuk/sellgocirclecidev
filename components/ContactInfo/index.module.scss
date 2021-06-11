@@ -1,0 +1,39 @@
+@import '../../styles/guidelines';
+
+.contactInfo {
+	text-align: center;
+	color: $prim_dark_2;
+
+	h2 {
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_semibold;
+	}
+}
+
+.capsule {
+	width: 45rem;
+	height: 7rem;
+	border-radius: 10rem;
+	border: 1px solid #707070;
+	margin: 0 auto;
+	margin-top: 2rem;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	p {
+		font-weight: $fontweight_semibold;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}

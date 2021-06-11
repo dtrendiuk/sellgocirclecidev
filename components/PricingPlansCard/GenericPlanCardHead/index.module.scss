@@ -1,0 +1,80 @@
+@import '../../../styles/guidelines';
+
+.pricingCardHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 2rem;
+
+	&__Left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+
+		h2 {
+			font-size: $fontsize_subtitle_24;
+			font-weight: $fontweight_bold;
+			margin: 0 auto;
+		}
+
+		p {
+			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
+			color: $second_grey;
+			max-width: 33rem;
+			text-align: center;
+			white-space: pre-line;
+			min-height: 7.1rem;
+		}
+	}
+}
+
+.planGems {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	svg {
+		margin-right: 5px;
+	}
+}
+
+.startingAt {
+	font-size: $fontsize_content_12;
+	margin-top: 2rem;
+	text-align: center;
+
+	h3 {
+		color: $blue_8;
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+	}
+}
+
+.billedAtPrice {
+	span {
+		margin: 0 6px;
+	}
+}
+
+.toggleWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 2rem auto;
+	div {
+		width: 100%;
+	}
+}
+
+.buyNowCTA {
+	width: 100%;
+	margin: 3rem auto;
+}
+
+.tableCardCTA {
+	width: 100%;
+	margin: 0;
+}

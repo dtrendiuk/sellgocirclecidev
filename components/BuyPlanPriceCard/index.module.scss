@@ -1,0 +1,69 @@
+@import '../../styles/guidelines';
+
+.buyPlanCard {
+	border: 1px solid $second_silver;
+	border-radius: 7px;
+	height: 48rem;
+	width: 37rem;
+	border-top: 5px solid $blue_8;
+	text-align: center;
+	color: $prim_dark_2;
+	padding: 2rem;
+	margin: 0 auto;
+
+	h3 {
+		font-size: $fontsize_content_16;
+		margin: 1rem auto;
+		font-weight: $fontweight_semibold;
+	}
+
+	@media only screen and(max-width: 400px) {
+		width: 100%;
+	}
+}
+
+.priceCardToggle {
+	margin-top: 3rem;
+}
+
+.price {
+	text-align: center;
+	font-size: $fontsize_subtitle_38;
+	color: $blue_7;
+	font-weight: $fontweight_bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem auto;
+
+	span {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_semibold;
+	}
+}
+
+.billedAt {
+	color: $prim_dark_2;
+	font-size: $fontsize_content_12;
+
+	&__price {
+		font-weight: $fontweight_bold;
+	}
+
+	&__striked {
+		text-decoration: line-through;
+		margin: 0 5px;
+		font-weight: $fontweight_regular;
+	}
+}
+
+.totalPrice {
+	color: $second_grey;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_regular;
+}
+
+.priceCardCTA {
+	width: 100%;
+	margin: 3rem auto !important;
+}

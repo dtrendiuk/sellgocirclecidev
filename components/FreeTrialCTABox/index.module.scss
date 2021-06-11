@@ -1,0 +1,122 @@
+@import '../../styles/guidelines';
+
+.freeTrialCTABox {
+	border: 1px solid $second_silver;
+	border-radius: 7px;
+	margin: 5rem auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 3rem 4rem;
+	padding-bottom: 0;
+
+	@media only screen and(max-width: 450px) {
+		padding: 2rem 2rem;
+	}
+}
+
+.infoWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+	width: 100%;
+	margin-bottom: 3rem;
+
+	@media only screen and(max-width: 950px) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__Desc {
+		text-align: left;
+
+		@media only screen and(max-width: 950px) {
+			text-align: center;
+		}
+
+		h2 {
+			color: $prim_dark_2;
+			font-size: $fontsize_subtitle_20;
+			font-weight: $fontweight_medium;
+		}
+
+		p {
+			color: $second_grey;
+			font-size: $fontsize_content_14;
+			margin: 1rem 0;
+		}
+	}
+}
+
+.freeTrailCTAWrapper {
+	text-align: left;
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+
+	@media only screen and(max-width: 950px) {
+		align-self: center;
+		margin: 2rem auto;
+	}
+
+	@media only screen and(max-width: 450px) {
+		width: 100%;
+	}
+
+	p {
+		color: $second_grey;
+		font-size: 11px;
+		margin-top: 4px;
+		text-align: center;
+	}
+}
+
+.freeTrialCTA {
+	width: 100%;
+	margin: 0 auto;
+	@media only screen and(max-width: 750px) {
+		align-self: center;
+	}
+}
+
+.detailsListWrapper {
+	border-top: 1px solid $second_silver;
+	list-style: none;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 750px) {
+		justify-content: space-evenly;
+	}
+
+	@media only screen and(max-width: 550px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+.detailsList {
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_regular;
+	color: inherit;
+	margin-right: 4rem;
+	span {
+		margin-right: 5px;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		margin-right: 2rem;
+	}
+
+	@media only screen and(max-width: 750px) {
+		margin-bottom: 1rem;
+	}
+}

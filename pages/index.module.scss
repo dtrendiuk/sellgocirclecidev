@@ -1,0 +1,27 @@
+@import '../styles/guidelines';
+
+.opportunityBanner {
+	height: 25rem;
+	background: $second_grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h2 {
+		color: $prim_white;
+	}
+}
+
+.homeBanner {
+	min-height: 35rem;
+	background: $orange_5;
+	margin-bottom: 10rem;
+	width: 100%;
+}
+
+.divider {
+	height: 2px;
+	background: $grey_5;
+	width: 100%;
+	max-width: 108rem;
+	margin: 0 auto;
+}
