@@ -35,12 +35,12 @@ workflows:
           context: sellgocirclecidev
           filters:
             branches:
-              only: develop
+              only: master
       - aws-ecr/build-and-push-image:
           context: sellgocirclecidev
           filters:
             branches:
-              only: develop
+              only: master
           name: "build_api"
           account-url: AWS_ECR_ACCOUNT_URL
           extra-build-args: "--build-arg ENVIRONMENT=${ENVIRONMENT} --build-arg GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN}"
@@ -53,12 +53,12 @@ workflows:
             - build_api
           filters:
             branches:
-              only: develop
+              only: master
       - aws-ecr/build-and-push-image:
           context: sellgocirclecidev
           filters:
             branches:
-              only: develop
+              only: master
           name: "build_nginx"
           account-url: AWS_ECR_ACCOUNT_URL
           path: "nginx"
@@ -70,7 +70,7 @@ workflows:
           context: sellgocirclecidev
           filters:
             branches:
-              only: develop
+              only: master
           requires:
             - build_api
             - build_nginx
@@ -82,7 +82,7 @@ workflows:
           context: sellgocirclecidev
           filters:
             branches:
-              only: develop
+              only: master
           requires:
             - build_api
           aws-region: ${AWS_REGION}
