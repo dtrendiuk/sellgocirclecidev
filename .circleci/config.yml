@@ -1,0 +1,151 @@
+version: 2.1
+jobs:
+  migrate-db:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: "migrate_database"
+          command: |
+            ssh ubuntu@${PROXY_IP} "cd ~/api && BRANCH=${CIRCLE_BRANCH} ENVIRONMENT=${ENVIRONMENT} GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN} ./migrate_db_from_circleci"
+  run-tests:
+    docker:
+      - image: circleci/python:3.7.3
+    steps:
+      - checkout
+      - run:
+          name: "install_dependencies"
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements/${ENVIRONMENT}.txt
+      - run:
+          name: "run_tests"
+          command: |
+            . venv/bin/activate
+            cd apiv1/tests && DJANGO_SETTINGS_MODULE=sellgoserver.settings.local pytest
+orbs:
+  aws-cli: circleci/aws-cli@0.1.15
+  aws-ecr: circleci/aws-ecr@6.15.3
+  aws-ecs: circleci/aws-ecs@0.0.8
+workflows:
+  build-and-deploy-dev:
+    jobs:
+      - run-tests:
+          context: development
+          filters:
+            branches:
+              only: develop
+      - aws-ecr/build-and-push-image:
+          context: development
+          filters:
+            branches:
+              only: develop
+          name: "build_api"
+          account-url: AWS_ECR_ACCOUNT_URL
+          extra-build-args: "--build-arg ENVIRONMENT=${ENVIRONMENT} --build-arg GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN}"
+          repo: "api"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+      - migrate-db:
+          context: development
+          requires:
+            - build_api
+          filters:
+            branches:
+              only: develop
+      - aws-ecr/build-and-push-image:
+          context: development
+          filters:
+            branches:
+              only: develop
+          name: "build_nginx"
+          account-url: AWS_ECR_ACCOUNT_URL
+          path: "nginx"
+          dockerfile: "Dockerfile"
+          repo: "nginx"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: development
+          filters:
+            branches:
+              only: develop
+          requires:
+            - build_api
+            - build_nginx
+          aws-region: ${AWS_REGION}
+          cluster-name: "${AWS_ECR_CLUSTER}"
+          family: "api"
+          container-image-name-updates: "container=api,tag=${CIRCLE_SHA1},container=nginx,tag=${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: development
+          filters:
+            branches:
+              only: develop
+          requires:
+            - build_api
+          aws-region: ${AWS_REGION}
+          cluster-name: "${AWS_ECR_CLUSTER}"
+          family: "api-worker"
+          container-image-name-updates: "container=celery,tag=${CIRCLE_SHA1}"
+  build-and-deploy-prod:
+    jobs:
+      - run-tests:
+          context: production
+          filters:
+            branches:
+              only: master
+      - aws-ecr/build-and-push-image:
+          context: production
+          filters:
+            branches:
+              only: master
+          name: "build_api"
+          account-url: AWS_ECR_ACCOUNT_URL
+          extra-build-args: "--build-arg ENVIRONMENT=${ENVIRONMENT} --build-arg GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN}"
+          repo: "api"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+      - migrate-db:
+          context: production
+          requires:
+            - build_api
+          filters:
+            branches:
+              only: master
+      - aws-ecr/build-and-push-image:
+          context: production
+          filters:
+            branches:
+              only: master
+          name: "build_nginx"
+          account-url: AWS_ECR_ACCOUNT_URL
+          path: "nginx"
+          dockerfile: "Dockerfile"
+          repo: "nginx"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: production
+          filters:
+            branches:
+              only: master
+          requires:
+            - build_api
+            - build_nginx
+          aws-region: ${AWS_REGION}
+          cluster-name: "${AWS_ECR_CLUSTER}"
+          family: "api"
+          container-image-name-updates: "container=api,tag=${CIRCLE_SHA1},container=nginx,tag=${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: production
+          filters:
+            branches:
+              only: master
+          requires:
+            - build_api
+          aws-region: ${AWS_REGION}
+          cluster-name: "${AWS_ECR_CLUSTER}"
+          family: "api-worker"
+          container-image-name-updates: "container=celery,tag=${CIRCLE_SHA1}"
