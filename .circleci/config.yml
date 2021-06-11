@@ -23,7 +23,7 @@ jobs:
           name: "run_tests"
           command: |
             . venv/bin/activate
-            cd apiv1/tests && DJANGO_SETTINGS_MODULE=sellgoserver.settings.local pytest
+#            cd apiv1/tests && DJANGO_SETTINGS_MODULE=sellgoserver.settings.local pytest
 orbs:
   aws-cli: circleci/aws-cli@0.1.15
   aws-ecr: circleci/aws-ecr@6.15.3
