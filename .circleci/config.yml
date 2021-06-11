@@ -18,7 +18,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements/${ENVIRONMENT}.txt
+#          pip install -r requirements/${ENVIRONMENT}.txt
       - run:
           name: "run_tests"
           command: |
