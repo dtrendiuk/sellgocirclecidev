@@ -14,6 +14,7 @@ workflows:
           name: "build_api"
           account-url: AWS_ECR_ACCOUNT_URL
           extra-build-args: "--build-arg ENVIRONMENT=${ENVIRONMENT} --build-arg GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN}"
+          dockerfile: "Dockerfile"
           repo: "api"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
@@ -24,8 +25,6 @@ workflows:
               only: master
           name: "build_nginx"
           account-url: AWS_ECR_ACCOUNT_URL
-          path: "nginx"
-          dockerfile: "Dockerfile"
           repo: "nginx"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
