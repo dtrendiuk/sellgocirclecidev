@@ -1,29 +1,4 @@
 version: 2.1
-jobs:
-  migrate-db:
-    machine:
-      enabled: true
-    steps:
-      - run:
-          name: "migrate_database"
-          command: |
-            ssh ubuntu@${PROXY_IP} "cd ~/api && BRANCH=${CIRCLE_BRANCH} ENVIRONMENT=${ENVIRONMENT} GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN} ./migrate_db_from_circleci"
-  run-tests:
-    docker:
-      - image: circleci/python:3.7.3
-    steps:
-      - checkout
-      - run:
-          name: "install_dependencies"
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-#          pip install -r requirements/${ENVIRONMENT}.txt
-      - run:
-          name: "run_tests"
-          command: |
-            . venv/bin/activate
-#            cd apiv1/tests && DJANGO_SETTINGS_MODULE=sellgoserver.settings.local pytest
 orbs:
   aws-cli: circleci/aws-cli@0.1.15
   aws-ecr: circleci/aws-ecr@6.15.3
@@ -47,13 +22,6 @@ workflows:
           repo: "api"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
-      - migrate-db:
-          context: sellgocirclecidev
-          requires:
-            - build_api
-          filters:
-            branches:
-              only: master
       - aws-ecr/build-and-push-image:
           context: sellgocirclecidev
           filters:
