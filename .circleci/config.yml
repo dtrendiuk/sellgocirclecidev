@@ -11,21 +11,10 @@ workflows:
           filters:
             branches:
               only: master
-          name: "build_api"
           account-url: AWS_ECR_ACCOUNT_URL
           extra-build-args: "--build-arg ENVIRONMENT=${ENVIRONMENT} --build-arg GITHUB_CICD_ACCESS_TOKEN=${GITHUB_CICD_ACCESS_TOKEN}"
           dockerfile: "Dockerfile"
           repo: "api"
-          region: AWS_REGION
-          tag: "${CIRCLE_SHA1}"
-      - aws-ecr/build-and-push-image:
-          context: sellgocirclecidev
-          filters:
-            branches:
-              only: master
-          name: "build_nginx"
-          account-url: AWS_ECR_ACCOUNT_URL
-          repo: "nginx"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
@@ -34,10 +23,9 @@ workflows:
             branches:
               only: master
           requires:
-            - build_api
-            - build_nginx
+            - aws-ecr/build-and-push-image
           aws-region: ${AWS_REGION}
-          cluster-name: "${AWS_ECR_CLUSTER}"
+          cluster-name: "sellgo-ecs"
           family: "api"
           container-image-name-updates: "container=api,tag=${CIRCLE_SHA1},container=nginx,tag=${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
@@ -46,8 +34,8 @@ workflows:
             branches:
               only: master
           requires:
-            - build_api
+            - aws-ecr/build-and-push-image
           aws-region: ${AWS_REGION}
-          cluster-name: "${AWS_ECR_CLUSTER}"
+          cluster-name: "sellgo-ecs"
           family: "api-worker"
           container-image-name-updates: "container=celery,tag=${CIRCLE_SHA1}"
