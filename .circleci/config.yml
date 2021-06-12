@@ -6,11 +6,6 @@ orbs:
 workflows:
   build-and-deploy-dev:
     jobs:
-      - run-tests:
-          context: sellgocirclecidev
-          filters:
-            branches:
-              only: master
       - aws-ecr/build-and-push-image:
           context: sellgocirclecidev
           filters:
